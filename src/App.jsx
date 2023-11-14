@@ -10,10 +10,12 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      <div className='md:flex'>
-        <Blogs></Blogs>
-        <Bookmarks></Bookmarks>
+      <div className='max-w-7xl mx-auto'>
+        <Header></Header>
+        <div className='md:flex'>
+          <Blogs></Blogs>
+          <Bookmarks></Bookmarks>
+        </div>
       </div>
     </>
   )
