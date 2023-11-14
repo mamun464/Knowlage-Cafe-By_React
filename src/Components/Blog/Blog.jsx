@@ -27,7 +27,7 @@ const Blog = ({ blog, handleAddToBookmarks }) => {
 
                     <span className='text-[#11111199] font-semibold text-xl flex items-center gap-2'>{reading_time} min read
                         <button onClick={() => {
-                            handleAddToBookmarks()
+                            handleAddToBookmarks(blog)
                         }}><CiBookmark /></button>
                     </span>
 
@@ -54,7 +54,8 @@ const Blog = ({ blog, handleAddToBookmarks }) => {
 };
 
 Blog.propTypes = {
-    blog: PropTypes.object.isRequired
+    blog: PropTypes.object.isRequired,
+    handleAddToBookmarks: PropTypes.func
 }
 
 export default Blog;
