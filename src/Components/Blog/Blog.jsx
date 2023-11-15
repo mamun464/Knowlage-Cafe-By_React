@@ -4,7 +4,7 @@ import { CiBookmark } from "react-icons/ci";
 
 const Blog = ({ blog, handleAddToBookmarks, handleReadingTime }) => {
     // console.log(blog);
-    const { title, cover, author, author_img, posted_date, reading_time, hashtags } = blog;
+    const { id, title, cover, author, author_img, posted_date, reading_time, hashtags } = blog;
     return (
         <div className='mb-20'>
             <img className='w-full mb-8 rounded-lg shadow-xl' src={cover} alt={`Cover of ${title}`} />
@@ -46,7 +46,7 @@ const Blog = ({ blog, handleAddToBookmarks, handleReadingTime }) => {
                 }
             </p>
             <p>
-                <button className='text-[#6047EC] font-semibold text-xl underline' onClick={() => { handleReadingTime(reading_time) }}>Mark as read</button>
+                <button className='text-[#6047EC] font-semibold text-xl underline' onClick={() => { handleReadingTime(reading_time, id) }}>Mark as read</button>
             </p>
             <p className='border-b-2 mt-7'></p>
 
